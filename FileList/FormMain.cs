@@ -6,13 +6,13 @@ namespace FileList
 {
     public partial class FormMain : Form
     {
-        #region private_fields
+        #region Private Fields
 
         private bool messageShowing = false;
 
         #endregion
 
-        #region private_methods
+        #region Private Methods
 
         private void saveFile(string text)
         {
@@ -73,7 +73,7 @@ namespace FileList
 
         #endregion
 
-        // designer_methods
+        // Designer's Methods
 
         public FormMain()
         {
@@ -82,9 +82,7 @@ namespace FileList
 
         private void dragDrop(object sender, DragEventArgs e)
         {
-            var dropData = (e.Data.GetData(DataFormats.FileDrop)) as string[];
-
-            if ((dropData == null) || (dropData.Length < 1))
+            if ((!((e.Data.GetData(DataFormats.FileDrop)) is string[] dropData)) || (dropData.Length < 1))
             {
                 return;
             }
