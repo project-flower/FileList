@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             this.groupBoxMode = new System.Windows.Forms.GroupBox();
             this.radioButtonFile = new System.Windows.Forms.RadioButton();
             this.radioButtonClipboard = new System.Windows.Forms.RadioButton();
@@ -80,6 +81,7 @@
             this.ClientSize = new System.Drawing.Size(107, 86);
             this.Controls.Add(this.groupBoxMode);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormMain";
             this.Text = "FileList";
             this.TopMost = true;
